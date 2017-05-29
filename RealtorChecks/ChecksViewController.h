@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  ChecksViewController.h
 //  RealtorChecks
 //
 //  Created by Trevor Stevenson on 5/7/17.
@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+@interface ChecksViewController : UITableViewController
+
+- (void)emailChecks;
 
 @end
-

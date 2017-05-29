@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B10E56E1EDB2B1700EBA81C /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B10E56D1EDB2B1700EBA81C /* WebKit.framework */; };
+		3B148CC31ED0DCC000613699 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3B148CC21ED0DCC000613699 /* OpenSans-Regular.ttf */; };
+		3B148CC51ED0DCDD00613699 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3B148CC41ED0DCDD00613699 /* OpenSans-Bold.ttf */; };
+		3B148CC71ED0DDAA00613699 /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3B148CC61ED0DDAA00613699 /* OpenSans-Italic.ttf */; };
+		3B40EB7D1EDB3F2A0044F0B8 /* MWRC.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B40EB7C1EDB3F2A0044F0B8 /* MWRC.png */; };
 		3BC490781EBF9DF400DA4B39 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BC490771EBF9DF400DA4B39 /* main.m */; };
 		3BC4907B1EBF9DF400DA4B39 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BC4907A1EBF9DF400DA4B39 /* AppDelegate.m */; };
 		3BC4907E1EBF9DF400DA4B39 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BC4907D1EBF9DF400DA4B39 /* ViewController.m */; };
@@ -15,6 +20,18 @@
 		3BC490861EBF9DF400DA4B39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BC490841EBF9DF400DA4B39 /* LaunchScreen.storyboard */; };
 		3BC490911EBF9DF500DA4B39 /* RealtorChecksTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BC490901EBF9DF500DA4B39 /* RealtorChecksTests.m */; };
 		3BC4909C1EBF9DF500DA4B39 /* RealtorChecksUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BC4909B1EBF9DF500DA4B39 /* RealtorChecksUITests.m */; };
+		3BC490AB1EBFEC8B00DA4B39 /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BC490AA1EBFEC8B00DA4B39 /* PhotoViewController.m */; };
+		3BC490B11EBFED6800DA4B39 /* ChecksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BC490B01EBFED6800DA4B39 /* ChecksViewController.m */; };
+		3BC490B71EC2BE4500DA4B39 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3BC490B51EC2BE4500DA4B39 /* Model.xcdatamodeld */; };
+		3BC490BA1EC2C3CA00DA4B39 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BC490B91EC2C3CA00DA4B39 /* CoreData.framework */; };
+		3BC491021EC2EAF800DA4B39 /* OptionsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BC491011EC2EAF800DA4B39 /* OptionsView.m */; };
+		3BC491051EC383E300DA4B39 /* CheckCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BC491041EC383E300DA4B39 /* CheckCell.m */; };
+		3BC491081EC3B8EA00DA4B39 /* PDFController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BC491071EC3B8EA00DA4B39 /* PDFController.m */; };
+		3BC4910A1EC5771A00DA4B39 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BC491091EC5771A00DA4B39 /* CoreText.framework */; };
+		3BC4910D1EC652E800DA4B39 /* SendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BC4910C1EC652E800DA4B39 /* SendViewController.m */; };
+		3BC491101EC6711300DA4B39 /* CustomPDFRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BC4910F1EC6711300DA4B39 /* CustomPDFRenderer.m */; };
+		3BC491121EC6885000DA4B39 /* checks.html in Resources */ = {isa = PBXBuildFile; fileRef = 3BC491111EC6885000DA4B39 /* checks.html */; };
+		3BC491141EC68F6A00DA4B39 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BC491131EC68F6A00DA4B39 /* MessageUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +52,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3B10E56D1EDB2B1700EBA81C /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		3B148CC21ED0DCC000613699 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		3B148CC41ED0DCDD00613699 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		3B148CC61ED0DDAA00613699 /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Italic.ttf"; sourceTree = "<group>"; };
+		3B40EB7C1EDB3F2A0044F0B8 /* MWRC.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MWRC.png; sourceTree = "<group>"; };
 		3BC490731EBF9DF400DA4B39 /* RealtorChecks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealtorChecks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BC490771EBF9DF400DA4B39 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3BC490791EBF9DF400DA4B39 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,6 +73,25 @@
 		3BC490971EBF9DF500DA4B39 /* RealtorChecksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RealtorChecksUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BC4909B1EBF9DF500DA4B39 /* RealtorChecksUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RealtorChecksUITests.m; sourceTree = "<group>"; };
 		3BC4909D1EBF9DF500DA4B39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3BC490A91EBFEC8B00DA4B39 /* PhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoViewController.h; sourceTree = "<group>"; };
+		3BC490AA1EBFEC8B00DA4B39 /* PhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
+		3BC490AF1EBFED6800DA4B39 /* ChecksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChecksViewController.h; sourceTree = "<group>"; };
+		3BC490B01EBFED6800DA4B39 /* ChecksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChecksViewController.m; sourceTree = "<group>"; };
+		3BC490B61EC2BE4500DA4B39 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		3BC490B91EC2C3CA00DA4B39 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		3BC491001EC2EAF800DA4B39 /* OptionsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionsView.h; sourceTree = "<group>"; };
+		3BC491011EC2EAF800DA4B39 /* OptionsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionsView.m; sourceTree = "<group>"; };
+		3BC491031EC383E300DA4B39 /* CheckCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckCell.h; sourceTree = "<group>"; };
+		3BC491041EC383E300DA4B39 /* CheckCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckCell.m; sourceTree = "<group>"; };
+		3BC491061EC3B8EA00DA4B39 /* PDFController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFController.h; sourceTree = "<group>"; };
+		3BC491071EC3B8EA00DA4B39 /* PDFController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFController.m; sourceTree = "<group>"; };
+		3BC491091EC5771A00DA4B39 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		3BC4910B1EC652E800DA4B39 /* SendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendViewController.h; sourceTree = "<group>"; };
+		3BC4910C1EC652E800DA4B39 /* SendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendViewController.m; sourceTree = "<group>"; };
+		3BC4910E1EC6711300DA4B39 /* CustomPDFRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomPDFRenderer.h; sourceTree = "<group>"; };
+		3BC4910F1EC6711300DA4B39 /* CustomPDFRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomPDFRenderer.m; sourceTree = "<group>"; };
+		3BC491111EC6885000DA4B39 /* checks.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = checks.html; sourceTree = "<group>"; };
+		3BC491131EC68F6A00DA4B39 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +99,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B10E56E1EDB2B1700EBA81C /* WebKit.framework in Frameworks */,
+				3BC491141EC68F6A00DA4B39 /* MessageUI.framework in Frameworks */,
+				3BC4910A1EC5771A00DA4B39 /* CoreText.framework in Frameworks */,
+				3BC490BA1EC2C3CA00DA4B39 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +130,7 @@
 				3BC4908F1EBF9DF500DA4B39 /* RealtorChecksTests */,
 				3BC4909A1EBF9DF500DA4B39 /* RealtorChecksUITests */,
 				3BC490741EBF9DF400DA4B39 /* Products */,
+				3BC490B81EC2C3CA00DA4B39 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,14 +147,25 @@
 		3BC490751EBF9DF400DA4B39 /* RealtorChecks */ = {
 			isa = PBXGroup;
 			children = (
-				3BC490791EBF9DF400DA4B39 /* AppDelegate.h */,
-				3BC4907A1EBF9DF400DA4B39 /* AppDelegate.m */,
 				3BC4907C1EBF9DF400DA4B39 /* ViewController.h */,
 				3BC4907D1EBF9DF400DA4B39 /* ViewController.m */,
+				3BC490A91EBFEC8B00DA4B39 /* PhotoViewController.h */,
+				3BC490AA1EBFEC8B00DA4B39 /* PhotoViewController.m */,
+				3BC490AF1EBFED6800DA4B39 /* ChecksViewController.h */,
+				3BC490B01EBFED6800DA4B39 /* ChecksViewController.m */,
+				3BC491001EC2EAF800DA4B39 /* OptionsView.h */,
+				3BC491011EC2EAF800DA4B39 /* OptionsView.m */,
+				3BC491031EC383E300DA4B39 /* CheckCell.h */,
+				3BC491041EC383E300DA4B39 /* CheckCell.m */,
+				3BC491061EC3B8EA00DA4B39 /* PDFController.h */,
+				3BC491071EC3B8EA00DA4B39 /* PDFController.m */,
+				3BC4910B1EC652E800DA4B39 /* SendViewController.h */,
+				3BC4910C1EC652E800DA4B39 /* SendViewController.m */,
+				3BC4910E1EC6711300DA4B39 /* CustomPDFRenderer.h */,
+				3BC4910F1EC6711300DA4B39 /* CustomPDFRenderer.m */,
 				3BC4907F1EBF9DF400DA4B39 /* Main.storyboard */,
-				3BC490821EBF9DF400DA4B39 /* Assets.xcassets */,
-				3BC490841EBF9DF400DA4B39 /* LaunchScreen.storyboard */,
-				3BC490871EBF9DF400DA4B39 /* Info.plist */,
+				3BC491111EC6885000DA4B39 /* checks.html */,
+				3B40EB7C1EDB3F2A0044F0B8 /* MWRC.png */,
 				3BC490761EBF9DF400DA4B39 /* Supporting Files */,
 			);
 			path = RealtorChecks;
@@ -117,6 +174,15 @@
 		3BC490761EBF9DF400DA4B39 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3BC490B51EC2BE4500DA4B39 /* Model.xcdatamodeld */,
+				3B148CC21ED0DCC000613699 /* OpenSans-Regular.ttf */,
+				3B148CC41ED0DCDD00613699 /* OpenSans-Bold.ttf */,
+				3B148CC61ED0DDAA00613699 /* OpenSans-Italic.ttf */,
+				3BC490821EBF9DF400DA4B39 /* Assets.xcassets */,
+				3BC490841EBF9DF400DA4B39 /* LaunchScreen.storyboard */,
+				3BC490871EBF9DF400DA4B39 /* Info.plist */,
+				3BC490791EBF9DF400DA4B39 /* AppDelegate.h */,
+				3BC4907A1EBF9DF400DA4B39 /* AppDelegate.m */,
 				3BC490771EBF9DF400DA4B39 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -138,6 +204,17 @@
 				3BC4909D1EBF9DF500DA4B39 /* Info.plist */,
 			);
 			path = RealtorChecksUITests;
+			sourceTree = "<group>";
+		};
+		3BC490B81EC2C3CA00DA4B39 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3B10E56D1EDB2B1700EBA81C /* WebKit.framework */,
+				3BC491131EC68F6A00DA4B39 /* MessageUI.framework */,
+				3BC491091EC5771A00DA4B39 /* CoreText.framework */,
+				3BC490B91EC2C3CA00DA4B39 /* CoreData.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,9 +326,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B148CC31ED0DCC000613699 /* OpenSans-Regular.ttf in Resources */,
 				3BC490861EBF9DF400DA4B39 /* LaunchScreen.storyboard in Resources */,
+				3B148CC51ED0DCDD00613699 /* OpenSans-Bold.ttf in Resources */,
 				3BC490831EBF9DF400DA4B39 /* Assets.xcassets in Resources */,
+				3B40EB7D1EDB3F2A0044F0B8 /* MWRC.png in Resources */,
 				3BC490811EBF9DF400DA4B39 /* Main.storyboard in Resources */,
+				3BC491121EC6885000DA4B39 /* checks.html in Resources */,
+				3B148CC71ED0DDAA00613699 /* OpenSans-Italic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,8 +359,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BC4907E1EBF9DF400DA4B39 /* ViewController.m in Sources */,
+				3BC490AB1EBFEC8B00DA4B39 /* PhotoViewController.m in Sources */,
+				3BC491101EC6711300DA4B39 /* CustomPDFRenderer.m in Sources */,
+				3BC490B11EBFED6800DA4B39 /* ChecksViewController.m in Sources */,
+				3BC490B71EC2BE4500DA4B39 /* Model.xcdatamodeld in Sources */,
+				3BC491081EC3B8EA00DA4B39 /* PDFController.m in Sources */,
 				3BC4907B1EBF9DF400DA4B39 /* AppDelegate.m in Sources */,
 				3BC490781EBF9DF400DA4B39 /* main.m in Sources */,
+				3BC491021EC2EAF800DA4B39 /* OptionsView.m in Sources */,
+				3BC491051EC383E300DA4B39 /* CheckCell.m in Sources */,
+				3BC4910D1EC652E800DA4B39 /* SendViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,6 +521,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Q443KXN5V7;
 				INFOPLIST_FILE = RealtorChecks/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.TripleTorus.RealtorChecks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -443,6 +534,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Q443KXN5V7;
 				INFOPLIST_FILE = RealtorChecks/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.TripleTorus.RealtorChecks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -518,6 +610,7 @@
 				3BC490A21EBF9DF500DA4B39 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3BC490A31EBF9DF500DA4B39 /* Build configuration list for PBXNativeTarget "RealtorChecksTests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +619,7 @@
 				3BC490A51EBF9DF500DA4B39 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3BC490A61EBF9DF500DA4B39 /* Build configuration list for PBXNativeTarget "RealtorChecksUITests" */ = {
 			isa = XCConfigurationList;
@@ -534,8 +628,22 @@
 				3BC490A81EBF9DF500DA4B39 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3BC490B51EC2BE4500DA4B39 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3BC490B61EC2BE4500DA4B39 /* Model.xcdatamodel */,
+			);
+			currentVersion = 3BC490B61EC2BE4500DA4B39 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 3BC4906B1EBF9DF400DA4B39 /* Project object */;
 }
