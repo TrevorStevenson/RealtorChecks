@@ -39,6 +39,15 @@
 {
     [controller dismissViewControllerAnimated:YES completion:nil];
     
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *check1File = [[paths objectAtIndex:0] stringByAppendingPathComponent:self.fileNameTextField.text];
+    NSString *check2File = [[paths objectAtIndex:0] stringByAppendingPathComponent:self.fileNameTextField.text];
+    NSString *logoFile = [[paths objectAtIndex:0] stringByAppendingPathComponent:self.fileNameTextField.text];
+    [fileManager removeItemAtPath:check1File error:nil];
+    [fileManager removeItemAtPath:check2File error:nil];
+    [fileManager removeItemAtPath:logoFile error:nil];
+    
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
