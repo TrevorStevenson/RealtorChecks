@@ -25,7 +25,7 @@
             <objects>
                 <navigationController navigationBarHidden="YES" id="AWW-TV-kvC" sceneMemberID="viewController">
                     <nil key="simulatedTopBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XsW-ZY-3Gq">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="XsW-ZY-3Gq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -36,6 +36,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hqj-Tr-7gW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-658" y="37"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="BbM-bZ-ZYH">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="Sa3-z1-8x5" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lid-ib-cp5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-502" y="694"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -49,39 +57,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RealtorChecks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9DI-HY-a0G">
-                                <rect key="frame" x="58" y="60" width="259" height="49.5"/>
-                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="36"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sending checks made easy." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wly-mt-6i7">
-                                <rect key="frame" x="105" y="117" width="165.5" height="19.5"/>
-                                <fontDescription key="fontDescription" name="OpenSans-Italic" family="Open Sans" pointSize="14"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cpu-ST-5B0">
-                                <rect key="frame" x="120" y="618" width="135" height="29"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="135" id="Aaj-2A-29s"/>
-                                    <constraint firstAttribute="height" constant="29" id="tKl-ls-tC1"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="OpenSans-Italic" family="Open Sans" pointSize="14"/>
-                                <state key="normal" title="Tutorial" backgroundImage="TutorialButton">
-                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="showTutorial:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FGt-qw-8u6"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8tS-kS-iQI">
-                                <rect key="frame" x="16" y="489" width="343" height="109"/>
+                                <rect key="frame" x="199" y="253" width="160" height="160"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="109" id="BN7-b5-kNC"/>
+                                    <constraint firstAttribute="width" constant="160" id="ihi-1N-8xO"/>
+                                    <constraint firstAttribute="height" constant="160" id="mIq-jk-IpU"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="24"/>
-                                <state key="normal" title="MyChecks" backgroundImage="MyChecks">
+                                <state key="normal" backgroundImage="myChecksButton">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -89,41 +72,59 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uIg-4Y-fNs">
-                                <rect key="frame" x="16" y="360" width="343" height="109"/>
+                                <rect key="frame" x="16" y="253.5" width="160" height="160"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="109" id="zlj-Kj-Lbw"/>
+                                    <constraint firstAttribute="height" constant="160" id="a0G-EQ-qPp"/>
+                                    <constraint firstAttribute="width" constant="160" id="ecO-Am-Bhy"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="24"/>
-                                <state key="normal" title="Create" backgroundImage="Create">
+                                <state key="normal" backgroundImage="createButton">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="takePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p7E-bs-KgP"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="titleLabel" translatesAutoresizingMaskIntoConstraints="NO" id="0ui-cZ-lC1">
+                                <rect key="frame" x="45" y="60" width="284" height="63"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="284" id="Oaz-f3-qws"/>
+                                    <constraint firstAttribute="height" constant="63" id="tib-9e-cHG"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cpu-ST-5B0">
+                                <rect key="frame" x="116" y="610" width="143" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="143" id="Aaj-2A-29s"/>
+                                    <constraint firstAttribute="height" constant="37" id="tKl-ls-tC1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="OpenSans-Italic" family="Open Sans" pointSize="14"/>
+                                <state key="normal" backgroundImage="tutorial">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showTutorial:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FGt-qw-8u6"/>
+                                    <segue destination="Sa3-z1-8x5" kind="show" id="r0M-ls-73O"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.73725490196078436" green="0.75686274509803919" blue="0.77254901960784317" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="0ui-cZ-lC1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1L7-Rg-ycZ"/>
+                            <constraint firstItem="0ui-cZ-lC1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="3zC-YW-O18"/>
                             <constraint firstItem="cpu-ST-5B0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Bni-N6-E9J"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="cpu-ST-5B0" secondAttribute="bottom" constant="20" id="KLx-EW-tO5"/>
-                            <constraint firstItem="9DI-HY-a0G" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ol3-aG-OI8"/>
                             <constraint firstItem="uIg-4Y-fNs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="OrC-72-MNa"/>
-                            <constraint firstItem="Wly-mt-6i7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="X23-zs-JS0"/>
-                            <constraint firstItem="9DI-HY-a0G" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="b4e-rn-Iow"/>
-                            <constraint firstItem="8tS-kS-iQI" firstAttribute="top" secondItem="uIg-4Y-fNs" secondAttribute="bottom" constant="20" id="cA9-Xd-YtD"/>
+                            <constraint firstItem="uIg-4Y-fNs" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="RYC-2a-KNu"/>
+                            <constraint firstItem="8tS-kS-iQI" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="YXh-fg-edg"/>
                             <constraint firstAttribute="trailingMargin" secondItem="8tS-kS-iQI" secondAttribute="trailing" id="e3w-I7-xyi"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="uIg-4Y-fNs" secondAttribute="trailing" id="ec4-6o-zZW"/>
-                            <constraint firstItem="8tS-kS-iQI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="gjW-QZ-U46"/>
-                            <constraint firstItem="8tS-kS-iQI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="p1r-Xx-oD0"/>
-                            <constraint firstItem="cpu-ST-5B0" firstAttribute="top" secondItem="8tS-kS-iQI" secondAttribute="bottom" constant="20" id="xpG-No-0Ns"/>
-                            <constraint firstItem="Wly-mt-6i7" firstAttribute="top" secondItem="9DI-HY-a0G" secondAttribute="bottom" constant="8" id="zJt-YY-uzQ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="HRg-tv-3qL"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-36.231884057971016" y="35.054347826086961"/>
+            <point key="canvasLocation" x="-37.600000000000001" y="34.632683658170919"/>
         </scene>
         <!--Checks View Controller-->
         <scene sceneID="tQh-oD-Cg1">
@@ -499,11 +500,12 @@
     </scenes>
     <resources>
         <image name="AddPhoto" width="127" height="127"/>
-        <image name="Create" width="354" height="109"/>
-        <image name="MyChecks" width="354" height="109"/>
         <image name="SaveButton" width="346" height="72"/>
         <image name="SendButton" width="346" height="72"/>
         <image name="TextField" width="311" height="54"/>
-        <image name="TutorialButton" width="143" height="37"/>
+        <image name="createButton" width="516" height="516"/>
+        <image name="myChecksButton" width="516" height="516"/>
+        <image name="titleLabel" width="852" height="189"/>
+        <image name="tutorial" width="429" height="111"/>
     </resources>
 </document>
