@@ -37,6 +37,8 @@
     check = [[NSManagedObject alloc] initWithEntity:descrip insertIntoManagedObjectContext:context];
 
     self.imgView1.image = self.myImage;
+    self.imgView1.layer.masksToBounds = YES;
+    self.imgView1.layer.cornerRadius = 10.0;
     self.imgView2.hidden = YES;
     
     UIAlertController *checkTypeAlert = [UIAlertController alertControllerWithTitle:@"Check Type" message:@"What type of check is this?" preferredStyle:UIAlertControllerStyleAlert];
@@ -91,6 +93,8 @@
     //when done taking photo, go to PhotoViewController and send image to controller
     self.img2 = info[UIImagePickerControllerEditedImage];
     self.imgView2.image = self.img2;
+    self.imgView2.layer.masksToBounds = YES;
+    self.imgView2.layer.cornerRadius = 10.0;
     
     [picker dismissViewControllerAnimated:YES completion:nil];
     
@@ -101,6 +105,7 @@
         self.checkType2 = @"Due Diligence";
         
     }]];
+    
     [checkTypeAlert addAction:[UIAlertAction actionWithTitle:@"Escrow" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         
         self.checkType2 = @"Escrow";

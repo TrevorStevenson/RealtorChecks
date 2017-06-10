@@ -123,6 +123,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B5761BD1EEC8CDA00543E85 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3BC4910B1EC652E800DA4B39 /* SendViewController.h */,
+				3BC4910C1EC652E800DA4B39 /* SendViewController.m */,
+				3BC4907C1EBF9DF400DA4B39 /* ViewController.h */,
+				3BC4907D1EBF9DF400DA4B39 /* ViewController.m */,
+				3BC490A91EBFEC8B00DA4B39 /* PhotoViewController.h */,
+				3BC490AA1EBFEC8B00DA4B39 /* PhotoViewController.m */,
+				3BC490AF1EBFED6800DA4B39 /* ChecksViewController.h */,
+				3BC490B01EBFED6800DA4B39 /* ChecksViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		3B5761BF1EEC8CF500543E85 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3BC491001EC2EAF800DA4B39 /* OptionsView.h */,
+				3BC491011EC2EAF800DA4B39 /* OptionsView.m */,
+				3BC491031EC383E300DA4B39 /* CheckCell.h */,
+				3BC491041EC383E300DA4B39 /* CheckCell.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		3B5761C01EEC8D0C00543E85 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3BC4910E1EC6711300DA4B39 /* CustomPDFRenderer.h */,
+				3BC4910F1EC6711300DA4B39 /* CustomPDFRenderer.m */,
+				3BC491061EC3B8EA00DA4B39 /* PDFController.h */,
+				3BC491071EC3B8EA00DA4B39 /* PDFController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		3BC4906A1EBF9DF400DA4B39 = {
 			isa = PBXGroup;
 			children = (
@@ -147,22 +184,9 @@
 		3BC490751EBF9DF400DA4B39 /* RealtorChecks */ = {
 			isa = PBXGroup;
 			children = (
-				3BC4907C1EBF9DF400DA4B39 /* ViewController.h */,
-				3BC4907D1EBF9DF400DA4B39 /* ViewController.m */,
-				3BC490A91EBFEC8B00DA4B39 /* PhotoViewController.h */,
-				3BC490AA1EBFEC8B00DA4B39 /* PhotoViewController.m */,
-				3BC490AF1EBFED6800DA4B39 /* ChecksViewController.h */,
-				3BC490B01EBFED6800DA4B39 /* ChecksViewController.m */,
-				3BC491001EC2EAF800DA4B39 /* OptionsView.h */,
-				3BC491011EC2EAF800DA4B39 /* OptionsView.m */,
-				3BC491031EC383E300DA4B39 /* CheckCell.h */,
-				3BC491041EC383E300DA4B39 /* CheckCell.m */,
-				3BC491061EC3B8EA00DA4B39 /* PDFController.h */,
-				3BC491071EC3B8EA00DA4B39 /* PDFController.m */,
-				3BC4910B1EC652E800DA4B39 /* SendViewController.h */,
-				3BC4910C1EC652E800DA4B39 /* SendViewController.m */,
-				3BC4910E1EC6711300DA4B39 /* CustomPDFRenderer.h */,
-				3BC4910F1EC6711300DA4B39 /* CustomPDFRenderer.m */,
+				3B5761BD1EEC8CDA00543E85 /* View Controllers */,
+				3B5761BF1EEC8CF500543E85 /* Views */,
+				3B5761C01EEC8D0C00543E85 /* Controllers */,
 				3BC4907F1EBF9DF400DA4B39 /* Main.storyboard */,
 				3BC491111EC6885000DA4B39 /* checks.html */,
 				3B40EB7C1EDB3F2A0044F0B8 /* MWRC.png */,

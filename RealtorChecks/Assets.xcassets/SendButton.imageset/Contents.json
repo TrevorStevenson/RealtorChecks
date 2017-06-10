@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "sendButton.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "SendButton.png",
       "scale" : "2x"
     },
     {
