@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "textField.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "TextField.png",
       "scale" : "2x"
     },
     {
