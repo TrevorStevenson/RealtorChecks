@@ -48,6 +48,7 @@
         self.checkType1 = @"Due Diligence";
         
     }]];
+    
     [checkTypeAlert addAction:[UIAlertAction actionWithTitle:@"Escrow" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         
         self.checkType1 = @"Escrow";
@@ -139,22 +140,29 @@
     }
     
     NSError *error = nil;
-    
-    [context save:&error];
-    
-    if (error)
-    {
-        NSLog(@"error");
-    }
-    else
-    {
-        [self.navigationController popToRootViewControllerAnimated:YES];
-    }
+    AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    [delegate saveContext];
+
+    if (error) NSLog(@"error");
+    else [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 
 - (IBAction)sendChecks:(id)sender
 {
+    UIActivityIndicatorView *indicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    indicator.hidesWhenStopped = YES;
+    UIView *loadingView = [[UIView alloc] init];
+    indicator.center = self.view.center;
+    loadingView.frame = UIEdgeInsetsInsetRect(indicator.frame, UIEdgeInsetsMake(-10, -10, -10, -10));
+    loadingView.layer.masksToBounds = YES;
+    loadingView.layer.cornerRadius = 10.0;
+    loadingView.backgroundColor = [UIColor blackColor];
+    indicator.center = loadingView.center;
+    [self.view addSubview:loadingView];
+    [self.view addSubview:indicator];
+    [indicator startAnimating];
+    
     PDFController *pdf = [[PDFController alloc] initWithAddress:self.propertyAddress.text buyer:self.buyer.text seller:self.seller.text check1:self.myImage check2:self.img2 type1:self.checkType1 type2:self.checkType2];
     
     SendViewController *svc = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"SVC"];
@@ -162,6 +170,9 @@
     svc.htmlString = pdf.htmlContent;
     
     [self.navigationController showViewController:svc sender:self];
+    
+    [loadingView removeFromSuperview];
+    [indicator stopAnimating];
 }
 
 - (IBAction)tap:(id)sender {

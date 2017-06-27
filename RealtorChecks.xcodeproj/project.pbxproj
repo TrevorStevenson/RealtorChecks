@@ -11,6 +11,7 @@
 		3B148CC31ED0DCC000613699 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3B148CC21ED0DCC000613699 /* OpenSans-Regular.ttf */; };
 		3B148CC51ED0DCDD00613699 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3B148CC41ED0DCDD00613699 /* OpenSans-Bold.ttf */; };
 		3B148CC71ED0DDAA00613699 /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3B148CC61ED0DDAA00613699 /* OpenSans-Italic.ttf */; };
+		3B1AAC281EEDC0EE00F99A52 /* TutorialScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B1AAC271EEDC0EE00F99A52 /* TutorialScreenViewController.m */; };
 		3B40EB7D1EDB3F2A0044F0B8 /* MWRC.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B40EB7C1EDB3F2A0044F0B8 /* MWRC.png */; };
 		3BC490781EBF9DF400DA4B39 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BC490771EBF9DF400DA4B39 /* main.m */; };
 		3BC4907B1EBF9DF400DA4B39 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BC4907A1EBF9DF400DA4B39 /* AppDelegate.m */; };
@@ -51,11 +52,26 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		3B938F431EFF367600EF2923 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		3B10E56D1EDB2B1700EBA81C /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		3B148CC21ED0DCC000613699 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		3B148CC41ED0DCDD00613699 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		3B148CC61ED0DDAA00613699 /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Italic.ttf"; sourceTree = "<group>"; };
+		3B1AAC261EEDC0EE00F99A52 /* TutorialScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TutorialScreenViewController.h; sourceTree = "<group>"; };
+		3B1AAC271EEDC0EE00F99A52 /* TutorialScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TutorialScreenViewController.m; sourceTree = "<group>"; };
 		3B40EB7C1EDB3F2A0044F0B8 /* MWRC.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MWRC.png; sourceTree = "<group>"; };
 		3BC490731EBF9DF400DA4B39 /* RealtorChecks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealtorChecks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BC490771EBF9DF400DA4B39 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -126,14 +142,16 @@
 		3B5761BD1EEC8CDA00543E85 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				3BC4910B1EC652E800DA4B39 /* SendViewController.h */,
-				3BC4910C1EC652E800DA4B39 /* SendViewController.m */,
 				3BC4907C1EBF9DF400DA4B39 /* ViewController.h */,
 				3BC4907D1EBF9DF400DA4B39 /* ViewController.m */,
 				3BC490A91EBFEC8B00DA4B39 /* PhotoViewController.h */,
 				3BC490AA1EBFEC8B00DA4B39 /* PhotoViewController.m */,
+				3BC4910B1EC652E800DA4B39 /* SendViewController.h */,
+				3BC4910C1EC652E800DA4B39 /* SendViewController.m */,
 				3BC490AF1EBFED6800DA4B39 /* ChecksViewController.h */,
 				3BC490B01EBFED6800DA4B39 /* ChecksViewController.m */,
+				3B1AAC261EEDC0EE00F99A52 /* TutorialScreenViewController.h */,
+				3B1AAC271EEDC0EE00F99A52 /* TutorialScreenViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -251,6 +269,7 @@
 				3BC4906F1EBF9DF400DA4B39 /* Sources */,
 				3BC490701EBF9DF400DA4B39 /* Frameworks */,
 				3BC490711EBF9DF400DA4B39 /* Resources */,
+				3B938F431EFF367600EF2923 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -389,6 +408,7 @@
 				3BC490B71EC2BE4500DA4B39 /* Model.xcdatamodeld in Sources */,
 				3BC491081EC3B8EA00DA4B39 /* PDFController.m in Sources */,
 				3BC4907B1EBF9DF400DA4B39 /* AppDelegate.m in Sources */,
+				3B1AAC281EEDC0EE00F99A52 /* TutorialScreenViewController.m in Sources */,
 				3BC490781EBF9DF400DA4B39 /* main.m in Sources */,
 				3BC491021EC2EAF800DA4B39 /* OptionsView.m in Sources */,
 				3BC491051EC383E300DA4B39 /* CheckCell.m in Sources */,

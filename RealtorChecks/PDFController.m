@@ -48,12 +48,15 @@
         {
             t2 = [t2 stringByAppendingString:@" Check"];
             content = [content stringByReplacingOccurrencesOfString:@"*CheckType2*" withString:t2];
+            content = [content stringByReplacingOccurrencesOfString:@"+" withString:@""];
         }
         else
         {
-            content = [content stringByReplacingOccurrencesOfString:@"*CheckType2*" withString:@""];
-
+            NSArray *stringPieces = [content componentsSeparatedByString:@"+"];
+            content = [content stringByReplacingOccurrencesOfString:stringPieces[1] withString:@""];
+            content = [content stringByReplacingOccurrencesOfString:@"+" withString:@""];
         }
+        
         content = [content stringByReplacingOccurrencesOfString:@"*PropertyAddress*" withString:add];
         content = [content stringByReplacingOccurrencesOfString:@"*Buyer*" withString:buy];
         content = [content stringByReplacingOccurrencesOfString:@"*Seller*" withString:sell];

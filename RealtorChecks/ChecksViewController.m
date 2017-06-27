@@ -30,6 +30,23 @@
     
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    context = delegate.persistentContainer.viewContext;
+    
+    NSFetchRequest *fetch = [NSFetchRequest fetchRequestWithEntityName:@"Checks"];
+    
+    NSError *error = nil;
+    
+    myChecks = [context executeFetchRequest:fetch error:&error];
+    
+    if (!myChecks) NSLog(@"error");
+    
     if (myChecks.count == 0)
     {
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"No Checks Saved" message:@"Click create in the main menu to create one!" preferredStyle:UIAlertControllerStyleAlert];
@@ -42,26 +59,7 @@
         
         [self presentViewController:alert animated:YES completion:nil];
     }
-}
 
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    
-    AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    
-    context = delegate.persistentContainer.viewContext;
-    
-    NSFetchRequest *fetch = [NSFetchRequest fetchRequestWithEntityName:@"Checks"];
-    
-    NSError *error = nil;
-    
-    myChecks = [context executeFetchRequest:fetch error:&error];
-
-    if (myChecks == nil)
-    {
-        NSLog(@"error");
-    }
 }
 
 #pragma mark - Table view data source
@@ -81,9 +79,9 @@
     CheckCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     
     // Configure the cell...
-    cell.propertyAddressLabel.text = [myChecks[indexPath.row] objectForKey:@"propertyAddress"];
-    cell.buyerLabel.text = [myChecks[indexPath.row] objectForKey:@"buyer"];
-    cell.sellerLabel.text = [myChecks[indexPath.row] objectForKey:@"seller"];
+    //cell.propertyAddressLabel.text = [myChecks[indexPath.row] objectForKey:@"propertyAddress"];
+    //cell.buyerLabel.text = [myChecks[indexPath.row] objectForKey:@"buyer"];
+    //cell.sellerLabel.text = [myChecks[indexPath.row] objectForKey:@"seller"];
     
     return cell;
 }

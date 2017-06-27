@@ -27,7 +27,9 @@
 - (NSPersistentContainer *)persistentContainer {
     // The persistent container for the application. This implementation creates and returns a container, having loaded the store for the application to it.
     @synchronized (self) {
-        if (_persistentContainer == nil) {
+    
+        if (_persistentContainer == nil)
+        {
             _persistentContainer = [[NSPersistentContainer alloc] initWithName:@"Model"];
             [_persistentContainer loadPersistentStoresWithCompletionHandler:^(NSPersistentStoreDescription *storeDescription, NSError *error) {
                 if (error != nil) {

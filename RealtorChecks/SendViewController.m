@@ -19,6 +19,8 @@
 @implementation SendViewController
 {
     PDFController *pdfController;
+    UIActivityIndicatorView *indicator;
+    UIView *loadingView;
 }
 
 - (void)viewDidLoad {
@@ -66,6 +68,19 @@
 
 - (IBAction)sendEmail:(id)sender
 {
+    indicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    indicator.hidesWhenStopped = YES;
+    loadingView = [[UIView alloc] init];
+    indicator.center = self.view.center;
+    loadingView.frame = UIEdgeInsetsInsetRect(indicator.frame, UIEdgeInsetsMake(-10, -10, -10, -10));
+    loadingView.layer.masksToBounds = YES;
+    loadingView.layer.cornerRadius = 10.0;
+    loadingView.backgroundColor = [UIColor blackColor];
+    indicator.center = loadingView.center;
+    [self.view addSubview:loadingView];
+    [self.view addSubview:indicator];
+    [indicator startAnimating];
+    
     pdfController = [[PDFController alloc] init];
     pdfController.SVC = self;
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -85,6 +100,9 @@
         [MVC addAttachmentData:[NSData dataWithContentsOfFile:fileName] mimeType:@"application/pdf" fileName:self.fileNameTextField.text];
         
         [self presentViewController:MVC animated:YES completion:nil];
+        
+        [loadingView removeFromSuperview];
+        [indicator stopAnimating];
     }
 }
 

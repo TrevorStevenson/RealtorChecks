@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "ChecksViewController.h"
 #import "PhotoViewController.h"
+#import "TutorialScreenViewController.h"
 
 @interface ViewController ()
 {
@@ -20,7 +21,13 @@
     
     //image to send to destination view controller
     UIImage *img;
+    
+    //tutorial images
+    NSMutableArray *tutorialImages;
+    
 }
+
+@property NSUInteger currentIndex;
 
 @end
 
@@ -33,7 +40,7 @@
     
     self.navigationController.navigationBarHidden = YES;
     
-    
+    tutorialImages = [[NSMutableArray alloc] initWithObjects:[UIImage imageNamed:@"screen1"], nil];
 }
 
 
@@ -67,6 +74,19 @@
 
 - (IBAction)takePhoto:(id)sender
 {
+    UIActivityIndicatorView *indicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    indicator.hidesWhenStopped = YES;
+    UIView *loadingView = [[UIView alloc] init];
+    indicator.center = self.view.center;
+    loadingView.frame = UIEdgeInsetsInsetRect(indicator.frame, UIEdgeInsetsMake(-10, -10, -10, -10));
+    loadingView.layer.masksToBounds = YES;
+    loadingView.layer.cornerRadius = 10.0;
+    loadingView.backgroundColor = [UIColor blackColor];
+    indicator.center = loadingView.center;
+    [self.view addSubview:loadingView];
+    [self.view addSubview:indicator];
+    [indicator startAnimating];
+    
     //if camera is available, open camera UI
     if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
     {
@@ -74,7 +94,12 @@
         IVC.delegate = self;
         IVC.allowsEditing = YES;
         IVC.sourceType = UIImagePickerControllerSourceTypeCamera;
-        [self presentViewController:IVC animated:YES completion:nil];
+        [self presentViewController:IVC animated:YES completion:^{
+            
+            [loadingView removeFromSuperview];
+            [indicator stopAnimating];
+            
+        }];
     }
     else
     {
@@ -85,6 +110,47 @@
 }
 
 - (IBAction)showTutorial:(id)sender {
+    
+    UIPageViewController *PVC = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
+    
+    TutorialScreenViewController *TSVC = (TutorialScreenViewController *)[[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"Tutorial"];
+    [PVC setViewControllers:@[TSVC] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
+    
+    PVC.delegate = self;
+    PVC.dataSource = self;
+    self.currentIndex = 0;
+    [self.navigationController showViewController:PVC sender:self];
+    
+}
+
+-(UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController
+{
+    if (self.currentIndex == 0) return nil;
+    
+    TutorialScreenViewController *TSVC = (TutorialScreenViewController *)[[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"Tutorial"];
+    TSVC.imgView.image = tutorialImages[self.currentIndex - 1];
+    self.currentIndex--;
+    return TSVC;
+}
+
+-(UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController
+{
+    if (self.currentIndex == tutorialImages.count) return nil;
+    
+    TutorialScreenViewController *TSVC = (TutorialScreenViewController *)[[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"Tutorial"];
+    TSVC.imgView.image = tutorialImages[self.currentIndex + 1];
+    self.currentIndex++;
+    return TSVC;
+}
+
+-(NSInteger)presentationCountForPageViewController:(UIPageViewController *)pageViewController
+{
+    return tutorialImages.count;
+}
+
+-(NSInteger)presentationIndexForPageViewController:(UIPageViewController *)pageViewController
+{
+    return 0;
 }
 
 @end
