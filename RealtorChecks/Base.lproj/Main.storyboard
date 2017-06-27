@@ -25,7 +25,7 @@
             <objects>
                 <navigationController navigationBarHidden="YES" id="AWW-TV-kvC" sceneMemberID="viewController">
                     <nil key="simulatedTopBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XsW-ZY-3Gq">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="XsW-ZY-3Gq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -165,13 +165,13 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Buyer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P5s-uu-swH">
-                                            <rect key="frame" x="8" y="67" width="36" height="20"/>
+                                            <rect key="frame" x="8" y="68" width="36" height="20"/>
                                             <fontDescription key="fontDescription" name="OpenSans-Italic" family="Open Sans" pointSize="14"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seller" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k2y-5W-Gsf">
-                                            <rect key="frame" x="8" y="126" width="34" height="20"/>
+                                            <rect key="frame" x="8" y="128" width="34" height="20"/>
                                             <fontDescription key="fontDescription" name="OpenSans-Italic" family="Open Sans" pointSize="14"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -183,13 +183,13 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ucq-TS-Wm0">
-                                            <rect key="frame" x="8" y="95" width="43" height="24"/>
+                                            <rect key="frame" x="8" y="96" width="43" height="24"/>
                                             <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DIc-Lw-Pyn">
-                                            <rect key="frame" x="8" y="154" width="43" height="24"/>
+                                            <rect key="frame" x="8" y="156" width="43" height="24"/>
                                             <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -252,7 +252,7 @@
                                     <constraint firstAttribute="height" constant="127" id="vV0-yZ-PM9"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="101 Main St" textAlignment="center" minimumFontSize="17" background="textField" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="jKQ-cz-egW">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="101 Main St" textAlignment="center" minimumFontSize="17" background="inputField" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="jKQ-cz-egW">
                                 <rect key="frame" x="20" y="262" width="374" height="54"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="54" id="hcL-GN-Mld"/>
@@ -265,12 +265,12 @@
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Property Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="to3-aZ-tX9">
-                                <rect key="frame" x="30" y="246" width="90" height="17"/>
+                                <rect key="frame" x="30" y="245" width="90" height="17"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Italic" family="Open Sans" pointSize="12"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="John Appleseed" textAlignment="center" minimumFontSize="17" background="textField" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="lwS-A3-0vh">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="John Appleseed" textAlignment="center" minimumFontSize="17" background="inputField" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="lwS-A3-0vh">
                                 <rect key="frame" x="20" y="341" width="374" height="54"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="54" id="fk4-a6-hZD"/>
@@ -288,7 +288,7 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Jen Appleseed" textAlignment="center" minimumFontSize="17" background="textField" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="xvi-pa-WJI">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Jen Appleseed" textAlignment="center" minimumFontSize="17" background="inputField" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="xvi-pa-WJI">
                                 <rect key="frame" x="20" y="420" width="374" height="54"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="54" id="qw1-hH-3ub"/>
@@ -401,8 +401,8 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="myCheck" textAlignment="center" minimumFontSize="17" background="textField" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="85l-I1-NqR">
-                                <rect key="frame" x="20" y="231" width="374" height="54"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="myCheck" textAlignment="center" minimumFontSize="17" background="inputField" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="85l-I1-NqR">
+                                <rect key="frame" x="20" y="230" width="374" height="54"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="54" id="TQn-gW-jUq"/>
                                 </constraints>
@@ -414,12 +414,12 @@
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="File Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0fH-Kv-U59">
-                                <rect key="frame" x="30" y="214" width="53" height="17"/>
+                                <rect key="frame" x="30" y="213" width="53" height="17"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Italic" family="Open Sans" pointSize="12"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="john@appleseed.com" textAlignment="center" minimumFontSize="17" background="textField" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="kI2-7M-pUy">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="john@appleseed.com" textAlignment="center" minimumFontSize="17" background="inputField" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="kI2-7M-pUy">
                                 <rect key="frame" x="20" y="341" width="374" height="54"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="54" id="sxP-Cn-MdR"/>
@@ -432,7 +432,7 @@
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Send to:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MKm-Qe-xaj">
-                                <rect key="frame" x="30" y="325" width="43" height="17"/>
+                                <rect key="frame" x="30" y="324" width="43" height="17"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Italic" family="Open Sans" pointSize="12"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -513,8 +513,8 @@
         <image name="addPhoto" width="516" height="516"/>
         <image name="cancelButton" width="516" height="516"/>
         <image name="createButton" width="516" height="516"/>
+        <image name="inputField" width="933" height="162"/>
         <image name="sendButton" width="516" height="516"/>
-        <image name="textField" width="933" height="162"/>
         <image name="titleLabel" width="852" height="189"/>
         <image name="tutorial" width="429" height="111"/>
     </resources>
