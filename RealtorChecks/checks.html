@@ -3,13 +3,16 @@
     <head>
         <style>
         
-        .footer{
+        html {
+            height: 100%;
+        }
+        .footer {
             width: 250px !important;
-            padding-top: 280px;
+            padding-bottom: 10px;
         }
         .checkImage {
-                width: 300px !important;
-                margin: 0 auto;
+            width: 300px !important;
+            margin: 0 auto;
         }
         
         p {
@@ -26,6 +29,12 @@
             padding-right: 5px;
         }
         
+        .bg {
+            margin-top: 0;
+            padding-top: 0;
+            top: 0;
+        }
+        
         </style>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
@@ -34,17 +43,19 @@
     </head>
     <body>
         <div class="container" style="padding-top:50px">
-            <div style="background-color:#bdc3c7" class="row justify-content-center">
-                <div class="card text-center">
-                    <img class="card-img-top checkImage" src="*Check1*" />
-                    <h4 class="card-title" style="padding-top:20px">*CheckType1* Check</h4>
-                </div>
-                +
-                <div class="card text-center">
-                    <img class="card-img-top checkImage" src="*Check2*">
-                        <h4 class="card-title" style="padding-top:20px">*CheckType2*</h4>
-                </div>
-                +
+            <div style="background-color:#bdc3c7" class="bg">
+                <div class="row justify-content-center">
+                    <div class="card text-center">
+                        <img class="card-img-top checkImage" src="*Check1*" />
+                        <h4 class="card-title" style="padding-top:20px">*CheckType1* Check</h4>
+                    </div>
+                    +
+                    <div class="card text-center">
+                        <img class="card-img-top checkImage" src="*Check2*">
+                            <h4 class="card-title" style="padding-top:20px">*CheckType2*</h4>
+                    </div>
+                    +
+                    </div>
             </div>
             <div style="padding-top:50px" class="row justify-content-center">
                 <p>Property Address: *PropertyAddress*</p>
