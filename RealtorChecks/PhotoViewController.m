@@ -122,6 +122,14 @@
     [picker dismissViewControllerAnimated:YES completion:nil];
 }
 
+-(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+{
+    if(range.length + range.location > textField.text.length) return NO;
+    
+    NSUInteger newLength = [textField.text length] + [string length] - range.length;
+    return newLength <= 33;
+}
+
 - (IBAction)saveChecks:(id)sender
 {
     [check setValue:self.propertyAddress.text forKey:@"propertyAddress"];

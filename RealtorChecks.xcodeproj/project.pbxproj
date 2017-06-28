@@ -33,6 +33,8 @@
 		3BC491101EC6711300DA4B39 /* CustomPDFRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BC4910F1EC6711300DA4B39 /* CustomPDFRenderer.m */; };
 		3BC491121EC6885000DA4B39 /* checks.html in Resources */ = {isa = PBXBuildFile; fileRef = 3BC491111EC6885000DA4B39 /* checks.html */; };
 		3BC491141EC68F6A00DA4B39 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BC491131EC68F6A00DA4B39 /* MessageUI.framework */; };
+		3BDBDB811F0340B4001F0667 /* IPDFCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BDBDB801F0340B4001F0667 /* IPDFCameraViewController.m */; };
+		3BEBF8B81F0335E900470E9F /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BEBF8B71F0335E900470E9F /* CameraViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +110,10 @@
 		3BC4910F1EC6711300DA4B39 /* CustomPDFRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomPDFRenderer.m; sourceTree = "<group>"; };
 		3BC491111EC6885000DA4B39 /* checks.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = checks.html; sourceTree = "<group>"; };
 		3BC491131EC68F6A00DA4B39 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		3BDBDB7F1F0340B4001F0667 /* IPDFCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPDFCameraViewController.h; sourceTree = "<group>"; };
+		3BDBDB801F0340B4001F0667 /* IPDFCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IPDFCameraViewController.m; sourceTree = "<group>"; };
+		3BEBF8B61F0335E900470E9F /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
+		3BEBF8B71F0335E900470E9F /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +150,8 @@
 			children = (
 				3BC4907C1EBF9DF400DA4B39 /* ViewController.h */,
 				3BC4907D1EBF9DF400DA4B39 /* ViewController.m */,
+				3BEBF8B61F0335E900470E9F /* CameraViewController.h */,
+				3BEBF8B71F0335E900470E9F /* CameraViewController.m */,
 				3BC490A91EBFEC8B00DA4B39 /* PhotoViewController.h */,
 				3BC490AA1EBFEC8B00DA4B39 /* PhotoViewController.m */,
 				3BC4910B1EC652E800DA4B39 /* SendViewController.h */,
@@ -202,6 +210,8 @@
 		3BC490751EBF9DF400DA4B39 /* RealtorChecks */ = {
 			isa = PBXGroup;
 			children = (
+				3BDBDB7F1F0340B4001F0667 /* IPDFCameraViewController.h */,
+				3BDBDB801F0340B4001F0667 /* IPDFCameraViewController.m */,
 				3B5761BD1EEC8CDA00543E85 /* View Controllers */,
 				3B5761BF1EEC8CF500543E85 /* Views */,
 				3B5761C01EEC8D0C00543E85 /* Controllers */,
@@ -403,6 +413,7 @@
 			files = (
 				3BC4907E1EBF9DF400DA4B39 /* ViewController.m in Sources */,
 				3BC490AB1EBFEC8B00DA4B39 /* PhotoViewController.m in Sources */,
+				3BDBDB811F0340B4001F0667 /* IPDFCameraViewController.m in Sources */,
 				3BC491101EC6711300DA4B39 /* CustomPDFRenderer.m in Sources */,
 				3BC490B11EBFED6800DA4B39 /* ChecksViewController.m in Sources */,
 				3BC490B71EC2BE4500DA4B39 /* Model.xcdatamodeld in Sources */,
@@ -410,6 +421,7 @@
 				3BC4907B1EBF9DF400DA4B39 /* AppDelegate.m in Sources */,
 				3B1AAC281EEDC0EE00F99A52 /* TutorialScreenViewController.m in Sources */,
 				3BC490781EBF9DF400DA4B39 /* main.m in Sources */,
+				3BEBF8B81F0335E900470E9F /* CameraViewController.m in Sources */,
 				3BC491021EC2EAF800DA4B39 /* OptionsView.m in Sources */,
 				3BC491051EC383E300DA4B39 /* CheckCell.m in Sources */,
 				3BC4910D1EC652E800DA4B39 /* SendViewController.m in Sources */,
@@ -508,7 +520,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -551,7 +563,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -565,7 +577,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Q443KXN5V7;
 				INFOPLIST_FILE = RealtorChecks/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.TripleTorus.RealtorChecks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -578,7 +590,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Q443KXN5V7;
 				INFOPLIST_FILE = RealtorChecks/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.TripleTorus.RealtorChecks;
 				PRODUCT_NAME = "$(TARGET_NAME)";

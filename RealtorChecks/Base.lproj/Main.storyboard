@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -78,6 +79,70 @@
             </objects>
             <point key="canvasLocation" x="-38" y="674"/>
         </scene>
+        <!--Camera View Controller-->
+        <scene sceneID="Baj-xS-Z1w">
+            <objects>
+                <viewController id="3pM-dX-6Tg" customClass="CameraViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Dti-Vw-9a8"/>
+                        <viewControllerLayoutGuide type="bottom" id="Wd9-qy-id5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eKR-2l-cBO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ga5-oK-it5" customClass="IPDFCameraViewController">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bio-Y8-6bh">
+                                        <rect key="frame" x="0.0" y="656" width="414" height="80"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jip-Jx-ksA">
+                                                <rect key="frame" x="182" y="15" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="Dvs-Mn-mer"/>
+                                                    <constraint firstAttribute="width" constant="50" id="zT9-2X-rP5"/>
+                                                </constraints>
+                                                <state key="normal" backgroundImage="captureButton"/>
+                                                <connections>
+                                                    <action selector="takePhoto:" destination="3pM-dX-6Tg" eventType="touchUpInside" id="HdS-To-aIE"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="Jip-Jx-ksA" secondAttribute="bottom" constant="15" id="947-Xs-tEG"/>
+                                            <constraint firstAttribute="height" constant="80" id="Mvp-rZ-VKV"/>
+                                            <constraint firstItem="Jip-Jx-ksA" firstAttribute="centerX" secondItem="Bio-Y8-6bh" secondAttribute="centerX" id="z11-Kt-6oq"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Bio-Y8-6bh" firstAttribute="leading" secondItem="ga5-oK-it5" secondAttribute="leading" id="Fit-Ks-3D0"/>
+                                    <constraint firstAttribute="trailing" secondItem="Bio-Y8-6bh" secondAttribute="trailing" id="do1-i0-tU9"/>
+                                    <constraint firstAttribute="bottom" secondItem="Bio-Y8-6bh" secondAttribute="bottom" id="i8c-ed-q00"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ga5-oK-it5" firstAttribute="leading" secondItem="eKR-2l-cBO" secondAttribute="leading" id="8yr-Ee-9eO"/>
+                            <constraint firstItem="ga5-oK-it5" firstAttribute="top" secondItem="eKR-2l-cBO" secondAttribute="top" id="Shs-W7-kWh"/>
+                            <constraint firstItem="Wd9-qy-id5" firstAttribute="top" secondItem="ga5-oK-it5" secondAttribute="bottom" id="fOK-kh-uFX"/>
+                            <constraint firstAttribute="trailing" secondItem="ga5-oK-it5" secondAttribute="trailing" id="y0n-l9-PEC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cameraView" destination="ga5-oK-it5" id="sxB-aG-zAR"/>
+                        <outlet property="captureButton" destination="Jip-Jx-ksA" id="ICl-24-HAo"/>
+                        <segue destination="a2O-Mw-7UT" kind="show" identifier="usePhoto" id="k6k-US-dnj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="91W-hW-eJg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="601.44927536231887" y="673.36956521739137"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -102,6 +167,7 @@
                                 </state>
                                 <connections>
                                     <action selector="takePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p7E-bs-KgP"/>
+                                    <segue destination="3pM-dX-6Tg" kind="show" id="pQs-j8-nwn"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="titleLabel" translatesAutoresizingMaskIntoConstraints="NO" id="0ui-cZ-lC1">
@@ -512,6 +578,7 @@
     <resources>
         <image name="addPhoto" width="516" height="516"/>
         <image name="cancelButton" width="516" height="516"/>
+        <image name="captureButton" width="255" height="255"/>
         <image name="createButton" width="516" height="516"/>
         <image name="inputField" width="933" height="162"/>
         <image name="sendButton" width="516" height="516"/>

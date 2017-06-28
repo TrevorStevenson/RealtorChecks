@@ -66,6 +66,13 @@
     [self showMailControllerWithFile:pdfController.fileName];
 }
 
+-(void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
+{
+    UIAlertController *failAlert = [UIAlertController alertControllerWithTitle:@"Error" message:@"Make sure you have internet connection to send checks." preferredStyle:UIAlertControllerStyleAlert];
+    [failAlert addAction:[UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleCancel handler:nil]];
+    [self presentViewController:failAlert animated:YES completion:nil];
+}
+
 - (IBAction)sendEmail:(id)sender
 {
     indicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
@@ -104,6 +111,14 @@
         [loadingView removeFromSuperview];
         [indicator stopAnimating];
     }
+}
+
+-(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+{
+    if(range.length + range.location > textField.text.length) return NO;
+    
+    NSUInteger newLength = [textField.text length] + [string length] - range.length;
+    return newLength <= 33;
 }
 
 - (IBAction)cancel:(id)sender {

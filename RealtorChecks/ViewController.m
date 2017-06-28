@@ -74,39 +74,40 @@
 
 - (IBAction)takePhoto:(id)sender
 {
-    UIActivityIndicatorView *indicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
-    indicator.hidesWhenStopped = YES;
-    UIView *loadingView = [[UIView alloc] init];
-    indicator.center = self.view.center;
-    loadingView.frame = UIEdgeInsetsInsetRect(indicator.frame, UIEdgeInsetsMake(-10, -10, -10, -10));
-    loadingView.layer.masksToBounds = YES;
-    loadingView.layer.cornerRadius = 10.0;
-    loadingView.backgroundColor = [UIColor blackColor];
-    indicator.center = loadingView.center;
-    [self.view addSubview:loadingView];
-    [self.view addSubview:indicator];
-    [indicator startAnimating];
+//    UIActivityIndicatorView *indicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+//    indicator.hidesWhenStopped = YES;
+//    UIView *loadingView = [[UIView alloc] init];
+//    indicator.center = self.view.center;
+//    loadingView.frame = UIEdgeInsetsInsetRect(indicator.frame, UIEdgeInsetsMake(-10, -10, -10, -10));
+//    loadingView.layer.masksToBounds = YES;
+//    loadingView.layer.cornerRadius = 10.0;
+//    loadingView.backgroundColor = [UIColor blackColor];
+//    indicator.center = loadingView.center;
+//    [self.view addSubview:loadingView];
+//    [self.view addSubview:indicator];
+//    [indicator startAnimating];
+//    
+//    //if camera is available, open camera UI
+//    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
+//    {
+//        UIImagePickerController *IVC = [[UIImagePickerController alloc] init];
+//        IVC.delegate = self;
+//        IVC.sourceType = UIImagePickerControllerSourceTypeCamera;
+//        [self presentViewController:IVC animated:YES completion:^{
+//            
+//            [loadingView removeFromSuperview];
+//            [indicator stopAnimating];
+//            
+//        }];
+//    }
+//    else
+//    {
+//        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Error" message:@"No camera available." preferredStyle:UIAlertControllerStyleAlert];
+//        [alert addAction:[UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleCancel handler:nil]];
+//        [self presentViewController:alert animated:YES completion:nil];
+//    }
     
-    //if camera is available, open camera UI
-    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
-    {
-        UIImagePickerController *IVC = [[UIImagePickerController alloc] init];
-        IVC.delegate = self;
-        IVC.allowsEditing = YES;
-        IVC.sourceType = UIImagePickerControllerSourceTypeCamera;
-        [self presentViewController:IVC animated:YES completion:^{
-            
-            [loadingView removeFromSuperview];
-            [indicator stopAnimating];
-            
-        }];
-    }
-    else
-    {
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Error" message:@"No camera available." preferredStyle:UIAlertControllerStyleAlert];
-        [alert addAction:[UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleCancel handler:nil]];
-        [self presentViewController:alert animated:YES completion:nil];
-    }
+    
 }
 
 - (IBAction)showTutorial:(id)sender {

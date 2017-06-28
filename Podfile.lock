@@ -1,0 +1,12 @@
+PODS:
+  - IPDFCameraViewController (0.0.1)
+
+DEPENDENCIES:
+  - IPDFCameraViewController
+
+SPEC CHECKSUMS:
+  IPDFCameraViewController: c7e346c760d39ed7a137121bedfcecfde041cde6
+
+PODFILE CHECKSUM: 612c91b8203870b1efd47b2c4e37a17030c37abc
+
+COCOAPODS: 1.2.1
