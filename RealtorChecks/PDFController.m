@@ -71,7 +71,6 @@
 
 - (void)loadWebView
 {
-    NSLog(@"loadwebview");
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *base = [paths objectAtIndex:0];
     NSURL *baseURL = [NSURL URLWithString:base];

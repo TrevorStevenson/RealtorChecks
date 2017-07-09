@@ -5,14 +5,21 @@
         
         html {
             height: 100%;
+            width: 100%;
         }
+        
+        body {
+            width: 100%;
+        }
+        
         .footer {
             width: 250px !important;
             padding-bottom: 10px;
+            margin: center;
         }
         .checkImage {
-            width: 300px !important;
-            margin: 0 auto;
+            width: 275px !important;
+            margin: 5px !important;
         }
         
         p {
@@ -20,43 +27,56 @@
             font-size: 18px;
         }
         
-        img {
-            margin: center;
-        }
-        
         .card {
             padding-left: 5px;
             padding-right: 5px;
+            margin: 30px !important;
         }
         
         .bg {
-            margin-top: 0;
-            padding-top: 0;
-            top: 0;
+            margin: 0px !important;
+            margin-top: 0px;
+            padding-top: 0px;
+            margin-left: 0px !important;
+            margin-right: 0px !important;
+            padding-left: 0px;
+            padding-right: 0px;
+            top: 0px;
+            width: 100% !important;
+        }
+        
+        .container {
+            margin: 0px auto !important;
+            margin-top: 0px;
+            padding-top: 0px;
+            margin-left: 0px !important;
+            margin-right: 0px !important;
+            padding-left: 0px;
+            padding-right: 0px;
+            top: 0px;
+            left: 0px;
+            width: 100% !important;
         }
         
         </style>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 
-
     </head>
     <body>
-        <div class="container" style="padding-top:50px">
-            <div style="background-color:#bdc3c7" class="bg">
+        <div class="container">
                 <div class="row justify-content-center">
                     <div class="card text-center">
-                        <img class="card-img-top checkImage" src="*Check1*" />
-                        <h4 class="card-title" style="padding-top:20px">*CheckType1* Check</h4>
+                        <img class="card-img-top checkImage" src="*Check1*" alt="Card image cap"/>
+                        <h5 class="card-title" style="padding-top:10px">*CheckType1* Check</h5>
                     </div>
                     +
                     <div class="card text-center">
-                        <img class="card-img-top checkImage" src="*Check2*">
-                            <h4 class="card-title" style="padding-top:20px">*CheckType2*</h4>
+                        <img class="card-img-top checkImage" src="*Check2*" alt="Card image cap"/>
+                        <h5 class="card-title" style="padding-top:10px">*CheckType2*</h5>
                     </div>
                     +
                     </div>
-            </div>
             <div style="padding-top:50px" class="row justify-content-center">
                 <p>Property Address: *PropertyAddress*</p>
             </div>
@@ -67,7 +87,7 @@
                 <p>Seller: *Seller*</p>
             </div>
             
-            <div style="bottom:0px" class="row justify-content-center">
+            <div style="padding-top:200px" class="row justify-content-center">
                 <img class="footer" src="*ImagePath*" />
             </div>
             

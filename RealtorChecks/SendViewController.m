@@ -75,6 +75,15 @@
 
 - (IBAction)sendEmail:(id)sender
 {
+    if (self.fileNameTextField.text.length == 0)
+    {
+        UIAlertController *errorAlert = [UIAlertController alertControllerWithTitle:@"File Name" message:@"You must provide a file name for the PDF." preferredStyle:UIAlertControllerStyleAlert];
+        [errorAlert addAction:[UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleCancel handler:nil]];
+        [self presentViewController:errorAlert animated:YES completion:nil];
+        return;
+    }
+    
+    
     indicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
     indicator.hidesWhenStopped = YES;
     loadingView = [[UIView alloc] init];
@@ -102,8 +111,8 @@
         MFMailComposeViewController *MVC = [[MFMailComposeViewController alloc] init];
         MVC.mailComposeDelegate = self;
         [MVC setToRecipients:@[self.sendToTextField.text]];
-        [MVC setSubject:@"Checks"];
-        [MVC setMessageBody:@"Here are the checks!" isHTML:NO];
+        [MVC setSubject:[NSString stringWithFormat:@"%@ Checks", self.propertyAddress]];
+        [MVC setMessageBody:[NSString stringWithFormat:@"Here are the checks for %@.", [self.propertyAddress stringByReplacingOccurrencesOfString:@"." withString:@""]] isHTML:NO];
         [MVC addAttachmentData:[NSData dataWithContentsOfFile:fileName] mimeType:@"application/pdf" fileName:self.fileNameTextField.text];
         
         [self presentViewController:MVC animated:YES completion:nil];
@@ -123,14 +132,34 @@
 
 - (IBAction)cancel:(id)sender {
     
-    [self.navigationController popViewControllerAnimated:YES];
+    UIAlertController *cancelAlert = [UIAlertController alertControllerWithTitle:@"Are you sure?" message:@"All data will be lost for these checks." preferredStyle:UIAlertControllerStyleAlert];
+    [cancelAlert addAction:[UIAlertAction actionWithTitle:@"No" style:UIAlertActionStyleCancel handler:nil]];
+    [cancelAlert addAction:[UIAlertAction actionWithTitle:@"Yes" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        
+        [self.navigationController popToRootViewControllerAnimated:YES];
+        
+    }]];
     
+    [self presentViewController:cancelAlert animated:YES completion:nil];
 }
+
 - (IBAction)tap:(id)sender {
     
     [self.sendToTextField resignFirstResponder];
     [self.fileNameTextField resignFirstResponder];
     
 }
+- (IBAction)switch:(UISwitch *)sender
+{
+    if (sender.isOn)
+    {
+        self.fileNameTextField.text = [[self.propertyAddress stringByReplacingOccurrencesOfString:@" " withString:@"_"] stringByReplacingOccurrencesOfString:@"." withString:@""];
+    }
+    else
+    {
+        self.fileNameTextField.text = @"";
+    }
+}
+
 
 @end

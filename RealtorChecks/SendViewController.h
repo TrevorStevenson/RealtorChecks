@@ -15,7 +15,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *fileNameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *sendToTextField;
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
-
+@property NSString *propertyAddress;
+    
 - (void)showMailControllerWithFile:(NSString *)fileName;
 
 @end

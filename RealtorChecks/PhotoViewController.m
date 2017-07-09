@@ -155,8 +155,7 @@
     else [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
-
-- (IBAction)sendChecks:(id)sender
+- (void)send
 {
     UIActivityIndicatorView *indicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
     indicator.hidesWhenStopped = YES;
@@ -174,13 +173,35 @@
     PDFController *pdf = [[PDFController alloc] initWithAddress:self.propertyAddress.text buyer:self.buyer.text seller:self.seller.text check1:self.myImage check2:self.img2 type1:self.checkType1 type2:self.checkType2];
     
     SendViewController *svc = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"SVC"];
-        
+    
     svc.htmlString = pdf.htmlContent;
+    svc.propertyAddress = self.propertyAddress.text;
     
     [self.navigationController showViewController:svc sender:self];
     
     [loadingView removeFromSuperview];
     [indicator stopAnimating];
+}
+
+
+- (IBAction)sendChecks:(id)sender
+{
+    if (self.propertyAddress.text.length == 0 || self.buyer.text.length == 0 || self.seller.text.length == 0)
+    {
+        UIAlertController *blankAlert = [UIAlertController alertControllerWithTitle:@"Blank Fields" message:@"One of the fields has been left blank. Are you sure you want to continue?" preferredStyle:UIAlertControllerStyleAlert];
+        [blankAlert addAction:[UIAlertAction actionWithTitle:@"Edit" style:UIAlertActionStyleCancel handler:nil]];
+        [blankAlert addAction:[UIAlertAction actionWithTitle:@"Continue" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            
+            [self send];
+            
+        }]];
+        
+        [self presentViewController:blankAlert animated:YES completion:nil];
+    }
+    else
+    {
+        [self send];
+    }
 }
 
 - (IBAction)tap:(id)sender {
