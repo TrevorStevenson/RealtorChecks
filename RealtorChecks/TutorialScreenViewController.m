@@ -10,7 +10,6 @@
 
 @interface TutorialScreenViewController ()
 
-
 @end
 
 @implementation TutorialScreenViewController
@@ -18,6 +17,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    NSArray *tutorialImages = @[[UIImage imageNamed:@"Tutorial 1"], [UIImage imageNamed:@"Tutorial 2"], [UIImage imageNamed:@"Tutorial 3"], [UIImage imageNamed:@"Tutorial 4"], [UIImage imageNamed:@"Tutorial 5"], [UIImage imageNamed:@"Tutorial 6"], [UIImage imageNamed:@"Tutorial 7"]];
+    
+    self.imgView.image = tutorialImages[self.currentIndex];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -27,7 +29,7 @@
 
 - (IBAction)dismiss:(id)sender
 {
-    [self.navigationController popToRootViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 /*

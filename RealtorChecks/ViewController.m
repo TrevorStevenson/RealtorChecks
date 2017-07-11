@@ -40,7 +40,7 @@
     
     self.navigationController.navigationBarHidden = YES;
     
-    tutorialImages = [[NSMutableArray alloc] initWithObjects:[UIImage imageNamed:@"screen1"], nil];
+    tutorialImages = [[NSMutableArray alloc] initWithObjects:[UIImage imageNamed:@"Tutorial 1"], [UIImage imageNamed:@"Tutorial 2"], [UIImage imageNamed:@"Tutorial 3"], [UIImage imageNamed:@"Tutorial 4"], [UIImage imageNamed:@"Tutorial 5"], [UIImage imageNamed:@"Tutorial 6"], [UIImage imageNamed:@"Tutorial 7"], nil];
 }
 
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info
@@ -114,40 +114,43 @@
 - (IBAction)showTutorial:(id)sender {
     
     UIPageViewController *PVC = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
+    PVC.view.backgroundColor = [UIColor blackColor];
     
     TutorialScreenViewController *TSVC = (TutorialScreenViewController *)[[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"Tutorial"];
+    TSVC.currentIndex = 0;
     [PVC setViewControllers:@[TSVC] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
     
     PVC.delegate = self;
     PVC.dataSource = self;
     self.currentIndex = 0;
-    [self.navigationController showViewController:PVC sender:self];
-    
+    [self presentViewController:PVC animated:YES completion:nil];    
 }
 
 -(UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController
 {
     if (self.currentIndex == 0) return nil;
     
-    TutorialScreenViewController *TSVC = (TutorialScreenViewController *)[[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"Tutorial"];
-    TSVC.imgView.image = tutorialImages[self.currentIndex - 1];
     self.currentIndex--;
+
+    TutorialScreenViewController *TSVC = (TutorialScreenViewController *)[[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"Tutorial"];
+    TSVC.currentIndex = self.currentIndex;
     return TSVC;
 }
 
 -(UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController
 {
-    if (self.currentIndex == tutorialImages.count) return nil;
+    if (self.currentIndex == 6) return nil;
     
-    TutorialScreenViewController *TSVC = (TutorialScreenViewController *)[[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"Tutorial"];
-    TSVC.imgView.image = tutorialImages[self.currentIndex + 1];
     self.currentIndex++;
+
+    TutorialScreenViewController *TSVC = (TutorialScreenViewController *)[[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"Tutorial"];
+    TSVC.currentIndex = self.currentIndex;
     return TSVC;
 }
 
 -(NSInteger)presentationCountForPageViewController:(UIPageViewController *)pageViewController
 {
-    return tutorialImages.count;
+    return 7;
 }
 
 -(NSInteger)presentationIndexForPageViewController:(UIPageViewController *)pageViewController

@@ -11,5 +11,6 @@
 @interface TutorialScreenViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIImageView *imgView;
+@property NSInteger currentIndex;
 
 @end
